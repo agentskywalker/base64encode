@@ -8,7 +8,7 @@ import java.awt.datatransfer.StringSelection;
 
 public class PasswordUtilityIntelliJ {
     public static void main(String[] args) {
-        String  encode = "JyotiRanjan";
+        String  encode = "AgentSkywalker";
 
         System.out.println("Input String is ::" + encode);
         byte[] bytesEncoded = Base64.encodeBase64(encode.getBytes());
