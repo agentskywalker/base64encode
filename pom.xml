@@ -21,9 +21,9 @@
             <version>1.15</version>
         </dependency>
     </dependencies>
-<build>
-    <pluginManagement>
-        <plugins>
+    <build>
+        <pluginManagement>
+            <plugins>
 
 
                 <!--<plugin>
@@ -48,65 +48,81 @@
                 </plugin>-->
 
 
-            <!--<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <archieve>
-                        <manifest>
-                            <addClassPath>true</addClassPath>
-                            <mainClass>com.agentskywalker.base64encode.PasswordUtility</mainClass>
-                        </manifest>
-                        <manifestEntries>
-                            <Class-Path>.</Class-Path>
-                        </manifestEntries>
-                    </archieve>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <appendAssemblyId>false</appendAssemblyId>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>make-my-jar-with-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>-->
-            <plugin>
-            <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>
-                                com.agentskywalker.base64encode.PasswordUtility
-                            </mainClass>
-                        </manifest>
-                    </archive>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <appendAssemblyId>false</appendAssemblyId>
-                </configuration>
-            </plugin>
-        </plugins>
-    </pluginManagement>
+                <!--<plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.3.0</version>
+                    <configuration>
+                        <archieve>
+                            <manifest>
+                                <addClassPath>true</addClassPath>
+                                <mainClass>com.agentskywalker.base64encode.PasswordUtility</mainClass>
+                            </manifest>
+                            <manifestEntries>
+                                <Class-Path>.</Class-Path>
+                            </manifestEntries>
+                        </archieve>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <appendAssemblyId>false</appendAssemblyId>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>make-my-jar-with-dependencies</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>-->
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <mainClass>
+                                    com.agentskywalker.base64encode.PasswordUtility
+                                </mainClass>
+                            </manifest>
+                        </archive>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <appendAssemblyId>false</appendAssemblyId>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
 
-<!--
-    https://www.baeldung.com/executable-jar-with-maven
+        <!--
+            https://www.baeldung.com/executable-jar-with-maven
 
-    https://stackoverflow.com/questions/574594/how-can-i-create-an-executable-jar-with-dependencies-using-maven
-    mvn clean compile assembly:single
+            https://stackoverflow.com/questions/574594/how-can-i-create-an-executable-jar-with-dependencies-using-maven
+            mvn clean compile assembly:single
 
-    THIS WORKS
-    https://jamandbees.net/2012/04/16/no-main-manifest-attribute-in-maven-jar/
-    mvn clean compile assembly:single
--->
-
+            THIS WORKS
+            https://jamandbees.net/2012/04/16/no-main-manifest-attribute-in-maven-jar/
+            mvn clean compile assembly:single
 
 
-</build>
+            C:\IntelliJ\GitHub\base64encode\target>java -jar Base64Encoding-1.0-SNAPSHOT.jar Jyoti Ranjan
+        Input String is ::Jyoti
+        Encoded Value is ::SnlvdGk=
+
+        ****** Output Encoded value is copied to system Clipboard *****
+
+
+        C:\IntelliJ\GitHub\base64encode\target>java -jar Base64Encoding-1.0-SNAPSHOT.jar "Jyoti Ranjan"
+        Input String is ::Jyoti Ranjan
+        Encoded Value is ::SnlvdGkgUmFuamFu
+
+        ****** Output Encoded value is copied to system Clipboard *****
+
+
+        -->
+
+
+
+    </build>
 </project>
